@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="shortcut icon" href="icone/logo.ico" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MTR-Series</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section>
+    <div class="bg"></div>
+    <header>
+      <a href="https://rebrand.ly/Ivet_srl" class="logo" target="_blank"><img src="icone/logo.png" class="logoImg"></a>
+     <!--  <div class="toggle"></div> -->
+      <ul class="navigation">
+     <!--    <li><a href="#" class="active">Home</a></li> -->
+     <!--    <li><a href="#">Menu</a></li>
+        <li><a href="#">What's New</a></li>
+        <li><a href="#">Contact</a></li> -->
+      </ul>
+    </header>
+    <div class="content">
+      <div class="textBox">
+        <h2>MTR3 1500 <span style="font-variant: small-caps;">2ac </span></h2> <!-- questo smal caps serve per vare il maiuscoletto -->
+        <p>
+          <ul>
+          
+            <li class="elenco1">3 Positions rotary table</li>
+            <li class="elenco1">Work piece length up to 1300 mm</li>
+            <li class="elenco1">Work piece diameter up to 550 mm</li>
+            <li class="elenco1">Scanning capability [Z] 1500 mm</li>
+            <li class="elenco1">Max. scanning speed [Z] 300 mm/s</li>
+            <li class="elenco1">Scanning capability [Y] 250 mm</li>
+            <li class="elenco1">Max. scanning speed [Y] 200 mm/s</li>
+            <!-- <li class="elenco1"></li> -->
+            <li class="elenco1">HMI "User friendly" type</li>
+            <li class="elenco1">Process control integrate</li>
+            <li class="elenco1">Process traceability integrate</li>
+            <li class="elenco1">Industry 4.0 ready</li>
+
+
+
+             </ul>
+        </p>
+        
+           <a href="https://rebrand.ly/Ivet_srl" target="_blank">Visit our Web Site</a>
+      </div>
+      <div class="imgBox">
+        <img src="macchine/mtr/mtr3_1500_2ac.png" class="fruits">
+      </div>
+    </div>
+    <!-- Selettore immagini in basso -->
+    <ul class="thumb">
+      <li data-text="MTV - SERIES">
+        <a href="">
+          <img src="macchine/mtr/mtr8_500_1t_1r.png" onclick="imgSlider('macchine/mtv_350_1ac_2p.png');">
+        </a>
+      </li>
+<!-- 2 -->
+      <li data-text="MTV - SERIES">
+        <a href="da rivedere">
+          <img src="macchine/mtr/mtr4_500_1t.png" onclick="imgSlider('macchine/mtv/mtv_1000.png');">
+        </a>
+      </li>
+<!-- 3 -->
+      <li data-text="MTV - SERIES" class="active">
+        <a href="da rivedere">
+          <img src="macchine/mtr/mtr3_1500_2ac.png" onclick="imgSlider('macchine/mtv/mtv_3000.png');">
+        </a>
+      </li>
+<!-- 4 -->
+       <li data-text="MTV - SERIES" >
+        <a href="da rivedere">
+          <img src="macchine/mtr/mtr8_2t_2r.png" onclick="imgSlider('macchine/mtv/mtv_3000.png');">
+        </a>
+      </li>
+      
+    </ul>
+    <ul class="sci">
+      <li><a href="https://rebrand.ly/Ivet_FB" target="_blank"><img src="icone/facebook.png"></a></li>
+      <li><a href="https://rebrand.ly/Ivet_YT" target="_blank"><img src="icone/youtube.png"></a></li>
+      <li><a href="https://rebrand.ly/Ivet_WB" target="_blank"><img src="icone/whatsapp.png"></a></li>
+      <li><a href="https://rebrand.ly/Ivet_IG" target="_blank"><img src="icone/instagram.png"></a></li>
+    </ul>
+  </section>
+
+  <script>
+/*
+    let menuToggle = document.querySelector('.toggle');
+    let navigation = document.querySelector('.navigation');
+    menuToggle.onclick = function(){
+      menuToggle.classList.toggle('active');
+      navigation.classList.toggle('active');
+    }
+*/
+    // change image on click
+    function imgSlider(anything){
+      document.querySelector('.fruits').src = anything;
+    }
+
+    // change background color
+    function changeBgColor(color){
+      const bg = document.querySelector('.bg');
+      bg.style.background = color;
+    }
+
+    // add active class in selected thmbnails
+    let el = document.querySelectorAll('.thumb li');
+    for (let i = 0; i < el.length; i++){
+      el[i].onclick = function(){
+        var c = 0;
+        while (c < el.length){
+          el[c++].className = 'check';
+        }
+        el[i].className = 'check active';
+      }
+    }
+
+  </script>
+</body>
+</html>

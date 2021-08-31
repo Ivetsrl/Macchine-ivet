@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="shortcut icon" href="icone/logo.ico" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MTV-Series</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section>
+    <div class="bg"></div>
+    <header>
+      <a href="https://rebrand.ly/Ivet_srl" class="logo" target="_blank"><img src="icone/logo.png" class="logoImg"></a>
+     <!--  <div class="toggle"></div> -->
+      <ul class="navigation">
+     <!--    <li><a href="#" class="active">Home</a></li> -->
+     <!--    <li><a href="#">Menu</a></li>
+        <li><a href="#">What's New</a></li>
+        <li><a href="#">Contact</a></li> -->
+      </ul>
+    </header>
+    <div class="content">
+      <div class="textBox">
+        
+         <h2>MTV 350 <span style="font-variant: small-caps;">1ac 2p </span> <br> compact line</h2>
+        <p>
+          <ul>
+          
+            <li class="elenco1">Work piece length up to 3000 mm</li>
+            <li class="elenco1">Work piece diameter up to 350 mm</li>
+            <li class="elenco1">Scanning capability [Z] 3200 mm</li>
+            <li class="elenco1">Max. scanning speed [Z] 500 mm/s</li>
+            <li class="elenco1">scanning capability [Y] 250 mm</li>
+            <li class="elenco1">Max. scanning speed [Y] 300 mm/s</li>
+            <li class="elenco1">HMI "user friendly" type</li>
+<!--             <li class="elenco1">Work piece diameter up to 100 mm</li> -->
+<!--             <li class="elenco1">Scanning speed 300 mm/s</li>
+            <li class="elenco1">HMI "User friendly" type</li> -->
+            <li class="elenco1">Process traceability integrate</li>
+            <li class="elenco1">Industry 4.0 ready</li>
+
+
+
+             </ul>
+        </p>
+        
+           <a href="https://rebrand.ly/Ivet_srl" target="_blank">Visit our Web Site</a>
+      </div>
+      <div class="imgBox">
+        <img src="macchine/mtv/mtv_3000_2ac_1p.png" class="fruits">
+      </div>
+    </div>
+    <!-- Selettore immagini in basso -->
+    <ul class="thumb">
+      <li data-text="MTV - SERIES" >
+        <a href="">
+          <img src="macchine/mtv/mtv_350_1ac_2p.png" onclick="imgSlider('macchine/mtv_350_1ac_2p.png');">
+        </a>
+      </li>
+
+      <li data-text="MTV - SERIES">
+        <a href="da rivedere">
+          <img src="macchine/mtv/mtv_1000_2ac_1p.png" onclick="imgSlider('macchine/mtv/mtv_1000.png');">
+        </a>
+      </li>
+
+      <li data-text="MTV - SERIES"  class="active">
+        <a href="da rivedere">
+          <img src="macchine/mtv/mtv_3000_2ac_1p.png" onclick="imgSlider('macchine/mtv/mtv_3000.png');">
+        </a>
+      </li>
+      
+    </ul>
+    <ul class="sci">
+      <li><a href="https://rebrand.ly/Ivet_FB" target="_blank"><img src="icone/facebook.png"></a></li>
+      <li><a href="https://rebrand.ly/Ivet_YT" target="_blank"><img src="icone/youtube.png"></a></li>
+      <li><a href="https://rebrand.ly/Ivet_WB" target="_blank"><img src="icone/whatsapp.png"></a></li>
+      <li><a href="https://rebrand.ly/Ivet_IG" target="_blank"><img src="icone/instagram.png"></a></li>
+    </ul>
+  </section>
+
+  <script>
+/*
+    let menuToggle = document.querySelector('.toggle');
+    let navigation = document.querySelector('.navigation');
+    menuToggle.onclick = function(){
+      menuToggle.classList.toggle('active');
+      navigation.classList.toggle('active');
+    }
+*/
+    // change image on click
+    function imgSlider(anything){
+      document.querySelector('.fruits').src = anything;
+    }
+
+    // change background color
+    function changeBgColor(color){
+      const bg = document.querySelector('.bg');
+      bg.style.background = color;
+    }
+
+    // add active class in selected thmbnails
+    let el = document.querySelectorAll('.thumb li');
+    for (let i = 0; i < el.length; i++){
+      el[i].onclick = function(){
+        var c = 0;
+        while (c < el.length){
+          el[c++].className = 'check';
+        }
+        el[i].className = 'check active';
+      }
+    }
+
+  </script>
+</body>
+</html>
