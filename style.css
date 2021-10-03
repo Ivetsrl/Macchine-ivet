@@ -49,7 +49,7 @@ body
 	top: -60px;
 	left: 20px;
     min-width: initial;
-    width: 260px;
+    width: auto;
     height: auto;
 	border-radius: 4px;
 	z-index: 1;
