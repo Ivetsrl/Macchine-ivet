@@ -50,7 +50,7 @@ body
 	left: 20px;
     min-width: initial;
     width: 260px;
-    height: 260px;
+    height: auto;
 	border-radius: 4px;
 	z-index: 1;
 	/*box-shadow: 0 5px 20px rgba(0,0,0,0.2);*/
